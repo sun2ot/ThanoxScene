@@ -1,0 +1,11 @@
+[
+  {
+    "name": "autoClashOn",
+    "description": "从桌面打开电报时，开启代理",
+    "priority": 2,
+    "condition": "frontPkgChanged == true && globalVarOf$agent.contains(to) && from == \"com.miui.home\"",
+    "actions": [
+      "su.exe(\"am start-service com.github.kr328.clash/com.github.kr328.clash.service.TunService\");"
+    ]
+  }
+]

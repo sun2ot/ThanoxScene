@@ -1,0 +1,11 @@
+[
+  {
+    "name": "Remove Card",
+    "description": "划掉后台卡片后,杀死APP后台",
+    "priority": 2,
+    "condition": "taskRemoved == true && globalVarOf$noRemain.contains(pkgName)",
+    "actions": [
+      "if (killer.killPackage(pkgName)) {ui.showShortToast(\"薄纱\");} else {ui.showShortToast(\"薄纱失败\");};"
+    ]
+  }
+]

@@ -1,0 +1,11 @@
+[
+  {
+    "name": "autoV2RayOn",
+    "description": "打开电报时，开启VPN",
+    "priority": 2,
+    "condition": "frontPkgChanged == true && globalVarOf$agent.contains(to) && from == \"com.miui.home\"",
+    "actions": [
+      "su.exe(\"am start com.v2ray.ang/com.v2ray.ang.ui.ScSwitchActivity\");"
+    ]
+  }
+]

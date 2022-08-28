@@ -1,0 +1,11 @@
+[
+  {
+    "name": "Anti Bilibili Indulgence Pro",
+    "description": "刷B站30分钟后自动关闭",
+    "priority": 2,
+    "condition": "frontPkgChanged == true && from == \"com.miui.home\" && globalVarOf$indulgeList.contains(to) && timeTick && tag == \"soon\"",
+    "actions": [
+      "ui.showShortToast(\"午时已到\");"
+    ]
+  }
+]

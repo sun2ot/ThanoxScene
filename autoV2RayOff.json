@@ -1,0 +1,13 @@
+[
+  {
+    "name": "autoV2RayOff",
+    "description": "离开电报时，关闭VPN",
+    "priority": 2,
+    "condition": "taskRemoved == true && pkgName == \"org.telegram.messenger\"",
+    "actions": [
+      "killer.killPackage(\"com.v2ray.ang\")",
+      "killer.killPackage(\"org.telegram.messenger\")",
+      "ui.showShortToast(\"V2Ray关闭\");"
+    ]
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Anti Bilibili Indulgence v2",
+    "description": "刷B站30分钟后自动关闭",
+    "priority": 1,
+    "delay": 5000,
+    "condition": "globalVarOf$indulgeList.contains(activity.getFrontAppPackage())",
+    "actions": ["ui.showShortToast(\"午时已到\");","killer.killPackage(pkgName)"]
+  }
+]

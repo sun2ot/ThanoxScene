@@ -1,0 +1,12 @@
+[
+  {
+    "name": "autoClashOff",
+    "description": "杀死电报时，关闭代理",
+    "priority": 2,
+    "condition": "taskRemoved == true && pkgName == \"org.telegram.messenger\"",
+    "actions": [
+      "killer.killPackage(\"org.telegram.messenger\")",
+      "killer.killPackage(\"com.github.kr328.clash\")"
+    ]
+  }
+]

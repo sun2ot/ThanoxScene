@@ -1,0 +1,10 @@
+[
+  {
+    "name": "微信电池白名单",
+    "description": "亮屏将微信移除白名单，息屏将微信加入白名单",
+    "priority": 1,
+    "condition": "if(screenOff == true) {Thread.sleep(3000);(su.exe(\"dumpsys deviceidle whitelist +com.tencent.mm\"))} else if (screenOn == true) {Thread.sleep(3000);(su.exe(\"dumpsys deviceidle whitelist -com.tencent.mm\"))}",
+    "actions": [""]
+  }
+]
+

@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Anti Bilibili Indulgence",
+    "description": "刷B站30分钟后自动关闭",
+    "priority": 2,
+    "condition": "frontPkgChanged == true && from == \"com.miui.home\" && globalVarOf$indulgeList.contains(to)",
+    "actions": [
+      "actor.delayed(1740000, \"ui.showShortToast(\\\"午时已到\\\")\")",
+      "actor.delayed(1800000, \"if (globalVarOf$indulgeList.contains(activity.getFrontAppPackage())) {killer.killPackage(activity.getFrontAppPackage());task.removeTasksForPackage(pkgName);}\")"
+    ]
+  }
+]
