@@ -1,0 +1,9 @@
+[
+  {
+    "name": "数据和wifi自动切换开关",
+    "description": "WiFi连接数据断开，WiFi断开数据启动",
+    "priority": 1,
+    "condition": "if( wifiStateChanged == true && wifiState.ssid == null && data.isDataEnabled() == false) {( ui.showShortToast(\"5G启动\") + data.setDataEnabled(true)+hw.disableWifi())} else if ( wifiStateChanged == true && wifiState.enabled == true && wifiState.ssid != null && data.isDataEnabled()== true) { (ui.showShortToast(\"关闭5G\") + data.setDataEnabled(false) )}",
+    "actions": [""]
+  }
+]
